@@ -21,8 +21,8 @@ def take_command():
             voice = listener.listen(source)
             command = listener.recognize_google(voice)
             command = command.lower()
-            if "alexa" in command:
-                command = command.replace("alexa", "")
+            if "uno" in command:
+                command = command.replace("uno", "")
                 print(command)
     except:
         pass
@@ -47,5 +47,7 @@ def run_alexa():
         talk(info)
     elif "joke" in command:
         talk(pyjokes.get_joke())
+
+
 while True:
     run_alexa()
